@@ -1,3 +1,9 @@
+@import url(/js/highlight-js/styles/rainbow.css);
+
+.hljs {
+	border: 1pt solid #555;
+}
+
 /**
  * dark.css
  * For AwsumChan by Circlepuller

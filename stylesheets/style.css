@@ -1,3 +1,9 @@
+@import url(/js/highlight-js/styles/default.css);
+
+.hljs {
+  border: 1pt solid #aaa;
+}
+
 body {
   background: #EEF2FF url('img/fade-blue.png') repeat-x 50% 0%;
   color: black;
@@ -953,20 +959,9 @@ pre {
   content: " ID: ";
 }
 
-pre {
-/* Better code tags */
-  max-width:inherit;
-  word-wrap:normal;
-  overflow:auto;
-  display: block!important;
-  font-size:9pt;
-  font-family:monospace;
-}
-
 span.pln {
   color:grey;
 }
-
 
 @media screen and (min-width: 768px) {
   p.intro {
