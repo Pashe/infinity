@@ -48,7 +48,7 @@ $(document).ready(function(){
 			hidden_data[board] = {}; // id : timestamp
 		}
 	
-		$('<a class="hide-thread-link" style="float:left;margin-right:5px" href="javascript:void(0)">[–]</a><span> </span>')
+		$('<a class="hide-thread-link" style="float:left;margin-right:5px" href="javascript:void(0)"><i class="fa fa-minus-square"></i></a><span> </span>')
 			.insertBefore(thread_container.find(':not(h2,h2 *):first'))
 			.click(function() {
 				hidden_data[board][id] = Math.round(Date.now() / 1000);
@@ -62,7 +62,7 @@ $(document).ready(function(){
 				hidden_div.html(hidden_div.html().replace(' [] ', ' '));
 				hidden_div.html(hidden_div.html().replace(' [] ', ' '));
 				
-				$('<a class="unhide-thread-link" style="float:left;margin-right:5px;margin-left:0px;" href="javascript:void(0)">[+]</a><span> </span>')
+				$('<a class="unhide-thread-link" style="float:left;margin-right:5px;margin-left:0px;" href="javascript:void(0)"><i class="fa fa-plus-square"></i></a><span> </span>')
 					.insertBefore(hidden_div.find(':first'))
 					.click(function() {
 						delete hidden_data[board][id];
@@ -87,7 +87,7 @@ $(document).ready(function(){
 			hidden_data[board] = {}; // id : timestamp
 		}
 		
-		$('<a class="post-hide-link" href="javascript:void(0)" title="Hide Post" style="float: left; margin-right: 5px">[–]</a>')
+		$('<a class="post-hide-link" href="javascript:void(0)" title="Hide Post" style="float: left; margin-right: 5px"><i class="fa fa-minus-square"></i></a>')
 			.insertBefore(post.children('p.intro').children('input.delete'))
 			.click(function() {
 				hidden_data[board][id] = Math.round(Date.now() / 1000);
@@ -95,7 +95,7 @@ $(document).ready(function(){
 				var hide_link = $(this);
 				post.children('div').hide();
 				hide_link.hide();
-				$('<a class="post-show-link" href="javascript:void(0)" title="Show Post" style="float: left; margin-right: 5px">[+]</a>')
+				$('<a class="post-show-link" href="javascript:void(0)" title="Show Post" style="float: left; margin-right: 5px"><i class="fa fa-plus-square"></i></a>')
 					.insertBefore(post.children('p.intro').children('input.delete'))
 					.click(function() {
 						delete hidden_data[board][id];
